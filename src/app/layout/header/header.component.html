@@ -1,18 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#"><i class="fa fa-paw fa-2x mr-2"></i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active mr-2">
-            <a class="nav-link" href="https://lmaia-22.github.io/tufinho/"><i class="fa fa-home mr-2"></i>Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-2">
-            <a class="nav-link" href="https://lmaia-22.github.io/tufinho/why"><i class="fa fa-question mr-2"></i>Reason Why</a>
-            </li>
-            <li class="nav-item mr-2">
-            <a class="nav-link" href="https://lmaia-22.github.io/tufinho/love"><i class="fa fa-heart mr-2"></i>Love</a>
+    </button>    
+
+        <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link" id="id01" href="https://lmaia-22.github.io/tufinho/"><i class="fa fa-home mr-2"></i>Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="id02" href="https://lmaia-22.github.io/tufinho/why/"><i class="fa fa-question mr-2"></i>Reason Why</a>
+                <a class="nav-link" id="id03" href="https://lmaia-22.github.io/tufinho/love/"><i class="fa fa-heart mr-2"></i>Love</a>
             </li>
         </ul>
     </div>

@@ -20,3 +20,17 @@
   /* Center and scale the image nicely */
     background-repeat: repeat;
 }
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      .btn-circle {
+        margin-top:50%;
+        padding: 13% 13%;
+        border-radius: 100%;
+        font-size: 1000%;
+        line-height: 1;
+    }
+
+    }
