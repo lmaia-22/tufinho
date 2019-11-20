@@ -1,0 +1,14 @@
+.btn-circle {
+    padding: 13% 13%;
+    border-radius: 100%;
+    font-size: 1800%;
+    line-height: 1;
+}
+
+.heart {
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 50px;
+    animation: pulse 1s ease infinite, 
+  }

@@ -1,0 +1,80 @@
+<app-header></app-header>
+<section class="bg-light p-3 text-center">
+        <h1 class="jumbotron-heading animated fadeInLeftBig">A razão de ter escrito isto</h1>
+        <p class="lead text-muted animated fadeInLeftBig delay-2s">Dizem que tudo o que está na internet fica 
+        para sempre e eu quero que fique para sempre registado e guardado num cofre que eu te amo muito!</p>
+</section>
+
+<section class="text-center mb-3">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>A gata</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>A gata com chapéu</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]"  alt="Random third slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>A gata com dentes brancos</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[3]" alt="Random fourth slide" class="img-fluid">
+      </div>
+      <div class="carousel-caption">
+        <h3>A gata mais fofa do mundo</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <div class="mt-4 mb-5">
+    <button class="btn btn-lg btn-outline-warning mb-3" (click)="open(content)"><i class="fa fa-heart mx-5"></i></button>
+  </div>
+</section>
+<app-footer></app-footer>
+
+<!-- music -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">A gatinha</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+      <form>
+      <div class="form-group">
+          <label for="dateOfBirth">Eu estou sempre à tua espera!</label>
+          <div class="text-center embed-responsive pb-5">
+            <div class="container mb-4">
+              <h4 class="d-inline mr-2">I</h4> 
+                <svg class="heart animated infinite delay-2s pulse" viewBox="0 0 32 29.6">
+                  <path class="m-2 w-100" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+            c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                </svg> 
+              <h4 class="d-inline ml-2">You</h4>
+            </div>
+            <audio controls autoplay>
+                <source src="../../../assets/Vicetone-Waiting.mp3">
+            </audio>
+        </div>
+      </div>
+      </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+  </div>
+</ng-template>
