@@ -12,3 +12,11 @@
     width: 50px;
     animation: pulse 1s ease infinite, 
   }
+
+  #home {
+    background: url('../../../assets/cats.png') repeat;
+    height: 100%;
+
+  /* Center and scale the image nicely */
+    background-repeat: repeat;
+}

@@ -10,7 +10,7 @@ import {NgbCarouselConfig, NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng
 })
 export class WhyComponent implements OnInit {
 
-  images = ['../assets/c1.jpg', '../assets/c2.jpg', '../assets/c3.jpg', '../assets/c4.jpg'];
+  images = ['/tufinho/assets/c1.jpg', '/tufinho/assets/c2.jpg', '/tufinho/assets/c3.jpg', '/tufinho/assets/c4.jpg'];
   closeResult: string;
 
   constructor(config: NgbCarouselConfig,
