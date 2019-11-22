@@ -275,10 +275,40 @@
         </div>
     </ng-template>
 
+<!-- Modal for 13 -->
+    <ng-template #content13 let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Uma pequena história</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="form-group">
+                    <label for="dateOfBirth">Eu não sei se vais ver este video ou não, 
+                        mas fica aqui, porque a esperança é a última a morrer!
+                        Ouve com som!
+                    </label>
+                    <div class="embed-responsive embed-responsive-16by9 text-center">
+                        <iframe autoplay width="560" height="315" src="https://www.youtube.com/embed/2mf936yeLx8?autoplay=1&modestbranding=1&amp&title=" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+            </div>
+        </ng-template>
+
 <!-- modal window finsih-->
     <hr>
     <!-- insert grid with cute kittens-->
     <div class="container x">
+            <div class="mt-2 mb-2 w-100">
+                <p>Últimas novidades! Clique aqui!</p>
+                    <button class="btn btn-lg btn-outline-danger mb-5 w-100" (click)="open13(content13)"><i class="fa fa-heart mx-5"></i></button>
+            </div>
         <!-- first row -->
         <div class="row mt-2">
             <div class="col-sm mt-2">
@@ -392,7 +422,7 @@
                             certeza que muitas mais estão para vir. 
                             Já tivemos discussões mesmo más e agressivas, 
                             sendo eu o culpado. Às vezes não consigo lidar
-                            com o que a gata me faz sentir e explodo.
+                            com o que a gata me faz sentir...
                         </p>
                         <button class="btn btn-lg btn-outline-warning" (click)="open9(content9)"><i class="fa fa-heart mx-5"></i></button>
                     </div>
@@ -407,10 +437,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Pôr as patas em cima</h5>
                         <p class="card-text">No final de todas as discussões depois de termos resolvido, 
-                            finalmente posso lhe por as minhas patas em cima, a minha parte favorita(é segredo shh). 
-                            E vou logo dar-lhe um longo abraço que espero eu, sempre, que nunca termine!</p>
+                            finalmente posso lhe por as minhas patas em cima, a minha parte favorita(é segredo shhhh). 
+                            E vou logo dar-lhe um longo e forte abraço que espero eu, sempre, que nunca termine!</p>
                             <button class="btn btn-lg btn-outline-warning" (click)="open10(content10)"><i class="fa fa-heart mx-5"></i></button>
-                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm mt-2">
