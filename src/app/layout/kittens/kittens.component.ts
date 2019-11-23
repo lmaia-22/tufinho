@@ -13,29 +13,21 @@ export class KittensComponent implements OnInit {
 
   closeResult: string;
   contactForm: FormGroup;
-  disabledSubmitButton: boolean = true;
 
     constructor(private modalService: NgbModal, private fb: FormBuilder, private connectionService: ConnectionService) {
   
       this.contactForm = fb.group({
         'contactFormSubjects': ['', Validators.required],
-        'contactFormMessage': ['', Validators.required]
+        'contactFormMessage': ['', Validators.required],
         });
       }
 
     //email - desejo  
-@HostListener('input') oninput() {
-
-  if (this.contactForm.valid) {
-    this.disabledSubmitButton = false;
-    }
-  }
 
   onSubmit() {
     this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
       alert('Desejo pedido!');
       this.contactForm.reset();
-      this.disabledSubmitButton = true;
     }, error => {
       console.log('Error', error);
     });
