@@ -36,7 +36,7 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="dateOfBirth">És LINDA, notasse mesmo que és filha do lindo</label>
+              <label for="dateOfBirth">És LINDA, nota-se mesmo que és filha do lindo</label>
             </div>
           </form>
         </div>
@@ -299,12 +299,49 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
             </div>
-        </ng-template>
+    </ng-template>
+
+<!-- Modal for 14 desejo -->
+<ng-template #content14 let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Desejos</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+                <form class="contactform" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <h5>Só tens de dizer qual o desejo e a razão pela qual o queres...</h5>
+                        <!-- Desejo-->
+                        <label for="dateOfBirth">O desejo</label>
+                        <input type="text" formControlName="contactFormSubjects" id="defaultContactFormName" mdbInputDirective
+                          class="form-control mb-4" placeholder="o que mais desejas...">
+                      
+                        <!-- Razão -->
+                        <div class="form-group">
+                            <label for="dateOfBirth">A razão</label>
+                            <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInputDirective id="exampleFormControlTextarea2"
+                            rows="3" placeholder="Porquê?"></textarea>
+                        </div>
+                      
+                        <!-- Send button -->
+                        <button  class="btn btn-danger w-100 mt-2"
+                          type="submit" [disabled]="disabledSubmitButton">Pedir</button>                    
+                </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+        </div>
+</ng-template>
 
 <!-- modal window finsih-->
     <hr>
     <!-- insert grid with cute kittens-->
     <div class="container x">
+            <div class="mt-2 mb-2 w-100">
+                <p>Pede um desejo aqui</p>
+                    <button class="btn btn-lg btn-outline-danger mb-5 w-100" (click)="open14(content14)"><i class="fa fa-heart mx-5"></i></button>
+            </div>
             <div class="mt-2 mb-2 w-100">
                 <p>Últimas novidades! Clique aqui!</p>
                     <button class="btn btn-lg btn-outline-danger mb-5 w-100" (click)="open13(content13)"><i class="fa fa-heart mx-5"></i></button>
@@ -437,8 +474,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Pôr as patas em cima</h5>
                         <p class="card-text">No final de todas as discussões depois de termos resolvido, 
-                            finalmente posso lhe por as minhas patas em cima, a minha parte favorita(é segredo shhhh). 
-                            E vou logo dar-lhe um longo e forte abraço que espero eu, sempre, que nunca termine!</p>
+                            finalmente posso lhe por as minhas patas em cima, a minha parte favorita (é segredo shhhh). 
+                            E vou logo dar-lhe um longo e forte abraço com esperança que nunca termine!</p>
                             <button class="btn btn-lg btn-outline-warning" (click)="open10(content10)"><i class="fa fa-heart mx-5"></i></button>
                     </div>
                 </div>
@@ -449,7 +486,7 @@
                     <div class="card-body">
                         <h5 class="card-title">A Nikita</h5>
                         <p class="card-text">Quando a melhor amiga da minha gata ficou doente, ela sofreu muito, e eu não a pude ajudar em nada.
-                            A única coisa que me aptecia fazer era pegar nela e na nikita e abraçar as duas com força sem nunca mais largar, 
+                            A única coisa que me aptecia fazer era pegar nela e na Nikita e abraçar as duas com força sem nunca mais largar, 
                             até que o susto fosse embora...
                         </p>
                         <button class="btn btn-lg btn-outline-warning" (click)="open11(content11)"><i class="fa fa-heart mx-5"></i></button>

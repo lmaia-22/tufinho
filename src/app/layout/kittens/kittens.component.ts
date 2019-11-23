@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ConnectionService } from '../../services/connection.service';
+
 
 @Component({
   selector: 'app-kittens',
@@ -9,8 +12,34 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class KittensComponent implements OnInit {
 
   closeResult: string;
+  contactForm: FormGroup;
+  disabledSubmitButton: boolean = true;
 
-  constructor(private modalService: NgbModal) {}
+    constructor(private modalService: NgbModal, private fb: FormBuilder, private connectionService: ConnectionService) {
+  
+      this.contactForm = fb.group({
+        'contactFormSubjects': ['', Validators.required],
+        'contactFormMessage': ['', Validators.required]
+        });
+      }
+
+    //email - desejo  
+@HostListener('input') oninput() {
+
+  if (this.contactForm.valid) {
+    this.disabledSubmitButton = false;
+    }
+  }
+
+  onSubmit() {
+    this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
+      alert('Desejo pedido!');
+      this.contactForm.reset();
+      this.disabledSubmitButton = true;
+    }, error => {
+      console.log('Error', error);
+    });
+  }
 
   ngOnInit() {
   }
@@ -131,6 +160,14 @@ export class KittensComponent implements OnInit {
 
   open13(content13) {
     this.modalService.open(content13, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  open14(content14) {
+    this.modalService.open(content14, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
