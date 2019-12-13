@@ -312,6 +312,7 @@
         <div class="modal-body">
                 <form class="contactform" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                         <h5>Só tens de dizer qual o desejo e a razão pela qual o queres...</h5>
+                        <p>E ele se concretizará!</p>
                         <!-- Desejo-->
                         <label for="dateOfBirth">O desejo</label>
                         <input type="text" formControlName="contactFormSubjects" id="defaultContactFormName" mdbInputDirective
@@ -334,12 +335,100 @@
         </div>
 </ng-template>
 
+
+<!-- Modal for 15 video -->
+<ng-template #content15 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Carta ao Pai Natal</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <p class="h5">Querido Pai Natal,</p>
+ 
+            <p class="h6 text-justify">Espero que estejas em forma, pois o Natal está a chegar e tens uma longa viagem para fazer e muitas chaminés onde entrar, para conseguires entregar os presentes a todas as crianças. 
+                Eu já não sou uma criança, bem depende dos dias, mas no entanto, queria te pedir uma prenda na mesma. Uma prenda muito especial para mim, pois tendo esta já não preciso de mais nenhuma. Esta prenda faria de mim a “criança“ mais feliz do mundo!! Eu sei Pai Natal, que às vezes me porto mal, que nem sempre tenho as melhores atitudes, por isso peço desculpa, não era minha intenção, magoar, nem fazer sofrer ninguém. Eu só queria ser feliz e fazer outros felizes!!</p>
+                    
+            <p class="h6 text-justify">E eu sou muito feliz, quando estou com a prenda que te estou a pedir, não preciso que venha embrulhada, nem com lacinho, ela já é linda de morrer, não precisa de enfeites nenhuns, só a quero a ELA!!!
+                    Já deves adivinhar, qual é a prenda que te estou a pedir. 
+                    E eu sei que o que estou a pedir é quase impossível, e que não tens qualquer poder sobre os sentimentos e as decisões de uma pessoa. Mas eu também não quero que a obrigues. 
+                    Eu quero uma oportunidade, é tudo o que preciso, para lhe poder provar o quanto eu gosto dela e quanto sou feliz ao lado dela!!!</p>
+                    
+            <p class="h6 text-justify">Resumindo, tens de me dar a prenda, sem me dar a prenda… eu sei que é complicado, mas peço-te por favor, que tentes, podes não conseguir, mas tenta por favor, por mim, é o meu único desejo…
+                    E eu juro, se tiver a prenda, vou amar aquela estúpida prenda para sempre, pois ela é MUITO especial para mim!!!</p>
+                    
+            <p class="h5 mt-5">Abraço,</p>
+            <p class="h5">de uma criança grande.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+    </div>
+</ng-template>
+
+<!-- Modal for 15 video -->
+<ng-template #content16 let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Um pequeno Poema</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="text-center">
+     
+                <p class="h6">A vida é construída com erros</p>
+                <p class="h6">Eles acontecem por diversas razões…</p>
+                <p class="h6">Porque somos burros…</p>
+                <p class="h6">Porque somos casmurros…</p>
+                <p class="h6">Porque ouvimos sussurros…</p>
+                <p class="h6 mb-4">E porque temos muros…</p>
+                        
+                <p class="h6">Mas eu prefiro estar errado,</p>
+                <p class="h6">do que sentir o meu coração amarrado,</p>
+                <p class="h6">do meu sentimento enterrado,</p>
+                <p class="h6">do meu amor por ti esborrachado,</p>
+                <p class="h6">sabendo que te estou a proteger</p>
+                <p class="h6 mb-4">em vez de desproteger.</p>
+                        
+                <p class="h6">Eu vou sempre te proteger…</p>
+
+                <p class="h6">Prefiro que estejas zangada,</p>
+                <p class="h6">Me queiras bater com um pau-de-jangada,</p>
+                <p class="h6">Me dar uma chapada,</p>
+                <p class="h6 mb-4">Ou até mesmo uma facada…</p>
+
+                <p class="h6">Do que estejas desprotegida…</p>
+                <p class="h6">E se tiver de me afastar,</p>
+                <p class="h6">De lutar contra o meu coração,</p>
+                <p class="h6 mb-4">contra tudo aquilo que eu quero e sinto…</p>
+
+                <p class="h6">Assim seja, pois a tua felicidade vem primeiro,</p>
+                <p class="h6">onde sempre esteve…</p>
+                        
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+        </div>
+    </ng-template>
+
 <!-- modal window finsih-->
     <hr>
     <!-- insert grid with cute kittens-->
     <div class="container x">
             <div class="mt-2 mb-2 w-100">
-                <p>Pede um desejo aqui</p>
+                    <p>Não sei se vais ler ou não, por isso clica, e lê por favor, é um pequeno poema que eu escrevi só para ti</p>
+                        <button class="btn btn-lg btn-outline-danger mb-5 w-100" (click)="open16(content16)"><i class="fa fa-heart mx-5"></i></button>
+            </div>
+            <div class="mt-2 mb-2 w-100">
+                    <p>Carta para o Pai Natal!</p>
+                        <button class="btn btn-lg btn-outline-danger mb-5 w-100" (click)="open15(content15)"><i class="fa fa-gift mx-5"></i></button>
+            </div>
+            <div class="mt-2 mb-2 w-100">
+                <p>Pede um desejo aqui!</p>
                     <button class="btn btn-lg btn-outline-danger mb-5 w-100" (click)="open14(content14)"><i class="fa fa-heart mx-5"></i></button>
             </div>
             <div class="mt-2 mb-2 w-100">
@@ -352,7 +441,7 @@
                 <div class="card h-100">
                     <img src="/tufinho/assets/1.jpg" class="card-img-top" >
                     <div class="card-body">
-                        <h5 class="card-title">O Ínicio</h5>
+                        <h5 class="card-title">O Início</h5>
                         <p class="card-text">Um dia encontrei uma gata muito bonita, de blusa vermelha e calça preta, 
                             não conseguia desviar o meu olhar dela... 
                             estava completamente perdido no tempo.

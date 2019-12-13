@@ -34,3 +34,20 @@
     }
 
     }
+
+    @media only screen 
+and (device-width : 375px) 
+and (device-height : 667px){
+  .btn-circle {
+    margin-top:50%;
+    padding: 13% 13%;
+    border-radius: 100%;
+    font-size: 800%;
+    line-height: 1;
+}
+body{
+  height: 667px;
+}
+
+
+}

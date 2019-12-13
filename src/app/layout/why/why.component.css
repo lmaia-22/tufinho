@@ -5,10 +5,10 @@
 }
 body {
     background: #333;
+    height: 100%;
     color: #fff;
     font-family: 'Archivo Black', sans-serif;
     font-size: 3em;
-    margin-top: 1em;
     text-align: center;
     text-transform: uppercase;
   }
@@ -27,5 +27,18 @@ body {
 
   /* Center and scale the image nicely */
     background-repeat: repeat;
+}
+
+/*iphone 6*/
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px){
+
+  #f1{
+  font-size: 30px;
+  }
+  #f2{
+  font-size: 13px;
+  }
 }
   
