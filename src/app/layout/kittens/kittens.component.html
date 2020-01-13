@@ -368,7 +368,7 @@
     </div>
 </ng-template>
 
-<!-- Modal for 15 video -->
+<!-- Modal for 16 Poema -->
 <ng-template #content16 let-modal>
         <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Um pequeno Poema</h4>
@@ -414,6 +414,71 @@
             <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
         </div>
     </ng-template>
+
+
+<!-- Modal for 17 Natal -->
+<ng-template #content17 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">A Pocahontas e o seu grande amor</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="text-center">
+             <img src="/tufinho/assets/pocahontas.jpg" class="card-img-top">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+    </div>
+</ng-template>
+
+<!-- Modal for 18 Recomeço -->
+<ng-template #content18 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">O Recomeço</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="text-center">
+             <p class="h6">O destino está a forçar, não nos deixa afastar... 
+                fizemos as pazes e estamos de volta ao mesmo.</p>
+            <p class="h6">E eu perdido, à espera que o tempo me dê alguma luz, sobre o que fazer...</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+    </div>
+</ng-template>
+
+<!-- Modal for 19 Recomeço -->
+<ng-template #content19 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">A maior questão de todas</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="text-center">
+            <p class="h6">Reza a lenda que</p>
+            <p class="h6">Quem quer dizer o que sente</p>
+            <p class="h6">Não sabe o que há de dizer.</p>
+            <p class="h6">Fala: parece que mente...</p>
+            <p class="h6">Cala: parece esquecer...</p>
+            <p class="h6">No entanto, eu nunca te esqueci, 
+            nem nunca vou esquecer, mesmo que não fiquemos juntos para sempre</p>
+            <p class="h6">Mas mesmo assim eu tenho de perguntar, eu tenho de saber, para poder ser feliz e fazer-te feliz</p>
+            <p class="h6">Tu queres o final feliz do conto de princesas ou não?</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">ADORO-TE</button>
+    </div>
+</ng-template>
 
 <!-- modal window finsih-->
     <hr>
@@ -602,6 +667,46 @@
                             E agora estou aqui parado no tempo, com os meus sentimentos aos saltos, à espera que o tempo te traga até mim...
                         </p>
                         <button class="btn btn-lg btn-outline-warning" (click)="open12(content12)"><i class="fa fa-heart mx-5"></i></button>
+                    </div>
+                </div>
+            </div>
+        l</div>
+    <!-- fifth row -->
+        <div class="row mt-2 mb-5">
+            <div class="col-sm mt-2">
+                <div class="card">
+                    <img src="/tufinho/assets/13.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">A pior prenda de Natal</h5>
+                        <p class="card-text">Neste Natal a Pocahontas e eu zangamo-nos, discutimos e afastamo-nos, passamos o Natal e o Ano Novo, longe, sem nos tocar, ver ou falar.  
+                            A única prenda de Natal que eu queria receber, não a tive, e pior que isso é achar que nunca mais a vou ter... 
+                        </p>
+                        <button class="btn btn-lg btn-outline-warning" (click)="open17(content17)"><i class="fa fa-heart mx-5"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm mt-2">
+                <div class="card">
+                    <img src="/tufinho/assets/14.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">O recomeço</h5>
+                        <p class="card-text">Voltamos ao mesmo ponto, eu não resisto à gata, e na sexta foi um dos dias mais feliz da minha vida, com ela ao meu lado... 
+                        mas no fim de semana, chegamos ao mesmo ponto... por isso voltou tudo ao mesmo, quase tudo, bem eu estou diferente...
+                        E estou diferente, porque não sei que mais fazer, dizer ou inventar, para conseguir conquistar a gata, para a ter ao meu lado... 
+                        </p>
+                        <button class="btn btn-lg btn-outline-warning" (click)="open18(content18)"><i class="fa fa-heart mx-5"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm mt-2">
+                <div class="card">
+                    <img src="/tufinho/assets/15.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">A maior questão de todas</h5>
+                        <p class="card-text">Eu sei que um dia ela irá me amar, o meu maior medo não é esse, 
+                        mas sim, quando esse dia chegar, o que será que a gata vai fazer?
+                        </p>
+                        <button class="btn btn-lg btn-outline-warning" (click)="open19(content19)"><i class="fa fa-heart mx-5"></i></button>
                     </div>
                 </div>
             </div>
