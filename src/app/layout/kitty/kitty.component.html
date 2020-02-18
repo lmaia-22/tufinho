@@ -1,1 +1,29 @@
+<app-header></app-header>
+<div class="row h-100 bg-light">
+    <div class="col animated fadeIn slow">
+        <div id="home"></div>
+    </div>
+    <div class="col-9">
+        <div class="text-center mt-3">
+            <div class="content">
+                <div class="text-center mt-3">
+                    <a class="h2 text-warning"><i class="animated bounceInLeft slow fa fa-paw fa-2x mr-3"></i>Funny Cats<i class="animated bounceInRight slow fa fa-paw fa-2x ml-3"></i></a>
+                    <p class="blockquote">A funny Cat a day keeps the sadness away</p>
+                </div>
+                <div class="text-center">
+                    <img class="img-thumbnail w-50 rounded mx-auto d-block" height="200" src="{{cats[0]?.url}}">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-warning mt-3 mb-5" (click)="refresh()">New Funny Kitty</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col animated fadeIn slow">
+        <div class="p-0" id="home"></div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
 
