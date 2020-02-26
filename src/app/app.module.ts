@@ -37,6 +37,7 @@ import { CartanatalComponent } from './modal/cartanatal/cartanatal.component';
 import { PoemaComponent } from './modal/poema/poema.component';
 import { SadkittyComponent } from './modal/sadkitty/sadkitty.component';
 import { KittyComponent } from './layout/kitty/kitty.component';
+import { SmileComponent } from './modal/smile/smile.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { KittyComponent } from './layout/kitty/kitty.component';
     PoemaComponent,
     SadkittyComponent,
     KittyComponent,
+    SmileComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,7 +109,8 @@ import { KittyComponent } from './layout/kitty/kitty.component';
   DesejosComponent,
   CartanatalComponent,
   PoemaComponent,
-  SadkittyComponent
+  SadkittyComponent,
+  SmileComponent
 ],
 
   bootstrap: [AppComponent]

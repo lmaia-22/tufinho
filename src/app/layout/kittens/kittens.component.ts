@@ -26,6 +26,7 @@ import { DesejosComponent } from 'src/app/modal/desejos/desejos.component';
 import { CartanatalComponent } from 'src/app/modal/cartanatal/cartanatal.component';
 import { PoemaComponent } from 'src/app/modal/poema/poema.component';
 import { SadkittyComponent } from 'src/app/modal/sadkitty/sadkitty.component';
+import { SmileComponent } from 'src/app/modal/smile/smile.component';
 
 @Component({
   selector: 'app-kittens',
@@ -191,5 +192,10 @@ export class KittensComponent implements OnInit {
   open23() {
     const modalRef = this.modalService.open(SadkittyComponent, {size:"lg", backdrop: 'static'});
     modalRef.componentInstance.title = 'sadkitty';
+  }
+
+  open24() {
+    const modalRef = this.modalService.open(SmileComponent, {size:"lg", backdrop: 'static'});
+    modalRef.componentInstance.title = 'smile';
   }
 }
