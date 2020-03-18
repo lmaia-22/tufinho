@@ -38,6 +38,7 @@ import { PoemaComponent } from './modal/poema/poema.component';
 import { SadkittyComponent } from './modal/sadkitty/sadkitty.component';
 import { KittyComponent } from './layout/kitty/kitty.component';
 import { SmileComponent } from './modal/smile/smile.component';
+import { TimeComponent } from './modal/time/time.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { SmileComponent } from './modal/smile/smile.component';
     SadkittyComponent,
     KittyComponent,
     SmileComponent,
+    TimeComponent,
   ],
   imports: [
     BrowserModule,
@@ -110,7 +112,8 @@ import { SmileComponent } from './modal/smile/smile.component';
   CartanatalComponent,
   PoemaComponent,
   SadkittyComponent,
-  SmileComponent
+  SmileComponent,
+  TimeComponent
 ],
 
   bootstrap: [AppComponent]
